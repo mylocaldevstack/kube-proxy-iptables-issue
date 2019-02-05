@@ -1,0 +1,14 @@
+KUBE-MARK-MASQ  all  --  anywhere             anywhere             /* default/B:http loadbalancer IP */
+KUBE-SVC-VLIHKAW76ZCQ7TOX  all  --  anywhere             anywhere             /* default/B:http loadbalancer IP */
+KUBE-MARK-DROP  all  --  anywhere             anywhere             /* default/B:http loadbalancer IP */
+KUBE-MARK-MASQ  tcp  --  anywhere             anywhere             /* default/B:http */ tcp dpt:31762
+KUBE-SVC-VLIHKAW76ZCQ7TOX  tcp  --  anywhere             anywhere             /* default/B:http */ tcp dpt:31762
+KUBE-MARK-MASQ  all  --  10.64.13.143         anywhere             /* default/B:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/B:http */ tcp to:10.64.13.143:80
+KUBE-MARK-MASQ  all  --  10.64.13.14          anywhere             /* default/B:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/B:http */ tcp to:10.64.13.14:80
+KUBE-MARK-MASQ  tcp  -- !10.64.12.0/23        10.64.14.88          /* default/B:http cluster IP */ tcp dpt:http
+KUBE-SVC-VLIHKAW76ZCQ7TOX  tcp  --  anywhere             10.64.14.88          /* default/B:http cluster IP */ tcp dpt:http
+KUBE-FW-VLIHKAW76ZCQ7TOX  tcp  --  anywhere             10.64.11.8           /* default/B:http loadbalancer IP */ tcp dpt:http
+KUBE-SEP-W65UFVRIKBYBZG5Q  all  --  anywhere             anywhere             /* default/B:http */ statistic mode random probability 0.50000000000
+KUBE-SEP-3AT4LZ7SLH3BUOKV  all  --  anywhere             anywhere             /* default/B:http */

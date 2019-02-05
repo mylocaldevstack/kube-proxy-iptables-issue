@@ -1,0 +1,4 @@
+ansible@node1:~$ kubectl get pods -l app=A -o wide
+NAME                                       READY     STATUS    RESTARTS   AGE       IP            NODE      NOMINATED NODE
+A-deployment-5ff875d444-cdrwx   1/1       Running   0          1d        10.64.13.76   node3     <none>
+A-deployment-5ff875d444-jjttz   1/1       Running   0          1d        10.64.13.12   node4     <none>

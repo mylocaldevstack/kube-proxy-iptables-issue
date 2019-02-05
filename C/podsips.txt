@@ -1,0 +1,14 @@
+ansible@node1:~$ kubectl get pods -l app=C -o wide
+NAME                             READY     STATUS    RESTARTS   AGE       IP             NODE      NOMINATED NODE
+C-deployment-cf44758dd-4nzw7   1/1       Running   0          3h        10.64.13.80    node3     <none>
+C-deployment-cf44758dd-5zzgh   1/1       Running   0          3h        10.64.13.11    node4     <none>
+C-deployment-cf44758dd-7d4mr   1/1       Running   0          3h        10.64.13.79    node3     <none>
+C-deployment-cf44758dd-8j9bc   1/1       Running   0          3h        10.64.13.78    node3     <none>
+C-deployment-cf44758dd-8xlbz   1/1       Running   0          3h        10.64.13.13    node4     <none>
+C-deployment-cf44758dd-hs6l9   1/1       Running   0          3h        10.64.13.7     node4     <none>
+C-deployment-cf44758dd-jxlct   1/1       Running   0          3h        10.64.13.10    node4     <none>
+C-deployment-cf44758dd-mghbd   1/1       Running   0          3h        10.64.13.137   node5     <none>
+C-deployment-cf44758dd-mzpfk   1/1       Running   0          3h        10.64.13.77    node3     <none>
+C-deployment-cf44758dd-r8xtj   1/1       Running   0          3h        10.64.13.140   node5     <none>
+C-deployment-cf44758dd-wm6pd   1/1       Running   0          3h        10.64.13.141   node5     <none>
+C-deployment-cf44758dd-zcvl7   1/1       Running   0          3h        10.64.13.142   node5     <none>

@@ -1,0 +1,44 @@
+KUBE-MARK-MASQ  all  --  anywhere             anywhere             /* default/C:http loadbalancer IP */
+KUBE-SVC-I2J2WUGCK5Z4OCVX  all  --  anywhere             anywhere             /* default/C:http loadbalancer IP */
+KUBE-MARK-DROP  all  --  anywhere             anywhere             /* default/C:http loadbalancer IP */
+KUBE-MARK-MASQ  tcp  --  anywhere             anywhere             /* default/C:http */ tcp dpt:31885
+KUBE-SVC-I2J2WUGCK5Z4OCVX  tcp  --  anywhere             anywhere             /* default/C:http */ tcp dpt:31885
+KUBE-MARK-MASQ  all  --  10.64.13.10          anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.10:80
+KUBE-MARK-MASQ  all  --  10.64.13.13          anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.13:80
+KUBE-MARK-MASQ  all  --  10.64.13.11          anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.11:80
+KUBE-MARK-MASQ  all  --  10.64.13.80          anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.80:80
+KUBE-MARK-MASQ  all  --  10.64.13.137         anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.137:80
+KUBE-MARK-MASQ  all  --  10.64.13.141         anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.141:80
+KUBE-MARK-MASQ  all  --  10.64.13.140         anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.140:80
+KUBE-MARK-MASQ  all  --  10.64.13.79          anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.79:80
+KUBE-MARK-MASQ  all  --  10.64.13.7           anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.7:80
+KUBE-MARK-MASQ  all  --  10.64.13.77          anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.77:80
+KUBE-MARK-MASQ  all  --  10.64.13.142         anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.142:80
+KUBE-MARK-MASQ  all  --  10.64.13.78          anywhere             /* default/C:http */
+DNAT       tcp  --  anywhere             anywhere             /* default/C:http */ tcp to:10.64.13.78:80
+KUBE-MARK-MASQ  tcp  -- !10.64.12.0/23        10.64.14.143         /* default/C:http cluster IP */ tcp dpt:http
+KUBE-SVC-I2J2WUGCK5Z4OCVX  tcp  --  anywhere             10.64.14.143         /* default/C:http cluster IP */ tcp dpt:http
+KUBE-FW-I2J2WUGCK5Z4OCVX  tcp  --  anywhere             10.64.11.9           /* default/C:http loadbalancer IP */ tcp dpt:http
+KUBE-SEP-2FHIRL55CHYNOOSU  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.08332999982
+KUBE-SEP-BKNM54KKH34SG37C  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.09090999980
+KUBE-SEP-3RQTE3LGO7KJDJOP  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.10000000009
+KUBE-SEP-GY2JF2TEJ6J2C5WU  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.11110999994
+KUBE-SEP-TOIFZGRYAZKHTUUA  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.12500000000
+KUBE-SEP-PUJQZLMXSHDG2Q3Z  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.14286000002
+KUBE-SEP-VLCYTC2CDTMNQW6B  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.16667000018
+KUBE-SEP-U4WPX2AMQE34AN6N  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.20000000019
+KUBE-SEP-VJIF5ITEFW2GTOVL  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.25000000000
+KUBE-SEP-YVBLNV2NTHINM3NS  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.33332999982
+KUBE-SEP-U4HTLE2DI7NHFGPO  all  --  anywhere             anywhere             /* default/C:http */ statistic mode random probability 0.50000000000
+KUBE-SEP-DRTSBVZ5QQ5QSC22  all  --  anywhere             anywhere             /* default/C:http */

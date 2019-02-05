@@ -1,0 +1,3 @@
+ansible@node1:~$ kubectl get svc -l app=A -o wide
+NAME           TYPE           CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE       SELECTOR
+A   LoadBalancer   10.64.14.29   10.64.11.2    80:32094/TCP   1d        app=A,version=v0.0.209-182760-dev
